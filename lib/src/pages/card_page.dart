@@ -12,7 +12,9 @@ class CardPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(10.0),
         children: <Widget>[
-          _cardTipo1()
+          _cardTipo1(),
+          SizedBox(height: 30.0),
+          _cardTipo2()
         ], 
       ),
     );
@@ -42,6 +44,30 @@ class CardPage extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+
+  _cardTipo2() {
+    return Card(
+      child: Column(
+        children: <Widget> [
+
+          FadeInImage(
+            image: NetworkImage('https://www.10wallpaper.com/wallpaper/medium/1501/sunset_winter_shadows-HD_Widescreen_Wallpaper_medium.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+
+          /*Image(
+            image: NetworkImage('https://www.10wallpaper.com/wallpaper/medium/1501/sunset_winter_shadows-HD_Widescreen_Wallpaper_medium.jpg'),
+          ),*/
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('No tengo idea de que poner'),
+          )
+      ]),
     );
   }
 }
